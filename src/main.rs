@@ -51,8 +51,8 @@ fn read_name(sources: &Vec<Source>) -> Author {
                     source.name(),
                 ))
                 .collect();
-            names.sort_by(|a, b| a.0.cmp(&b.0));
 
+            names.sort_by(|a, b| a.0.cmp(&b.0));
             match names.first() {
                 None => Author::Any,
                 Some(ref name) => Author::Name(name.1.to_owned())
